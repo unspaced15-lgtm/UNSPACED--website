@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<title>UNSPACED — Move Beyond</title>
+<meta name="description" content="UNSPACED — independent streetwear built for movement beyond the expected.">
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+<nav class="nav">
+  <a href="#home"><img src="assets/logo-grey.png" alt="UNSPACED"></a>
+  <div class="navlinks">
+    <a href="#shop">Shop</a><a href="#drops">New Drops</a><a href="#about">About</a><a href="#lookbook">Lookbook</a><a href="#contact">Contact</a>
+  </div>
+  <div style="display:flex;gap:8px;align-items:center"><button class="cartbtn" onclick="openOwner()">Owner</button><button class="cartbtn" onclick="toggleCart()">Cart <span id="count">0</span></button></div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+  <img class="heroStar" src="assets/unspaced-star.svg" alt="" aria-hidden="true">
+  <div class="heroInner">
+    <div class="kicker">UNSPACED / Present · Centered · Connected</div>
+    <img class="heroLogo" src="assets/logo-grey.png" alt="UNSPACED logo">
+    <h1>Be completely<br>present.</h1>
+    <p class="heroManifesto">Centered. Infinitely connected. Without distraction.</p>
+    <p>Don't let self-imposed boundaries define your focus. Be the still star in the night sky while racing thoughts and worries drift past like clouds. Your state remains calm, unshaken and unbounded — present, grounded and untouched by negative energy.</p>
+    <a class="cta" href="#shop">Enter the collection ↘</a>
+  </div>
+</section>
+
+<div class="marquee"><span>UNSPACED — NO FIXED POSITION — MOVE BEYOND — UNSPACED — NO FIXED POSITION — MOVE BEYOND — </span></div>
+
+<section class="section" id="shop">
+  <div class="sectionHead reveal"><div><div class="eyebrow">01 / Shop</div><h2>Core pieces</h2></div><p class="sectionIntro">A first edit of heavyweight essentials and graphic-led pieces. Product imagery and pricing can be swapped for your real catalogue.</p></div>
+  <div class="products">
+    <article class="card reveal"><div class="visual"></div><div class="cardInfo"><span>Core Oversized Tee</span><span class="price">R 499</span></div></article>
+    <article class="card reveal"><div class="visual blue"></div><div class="cardInfo"><span>Star Track Hoodie</span><span class="price">R 899</span></div></article>
+    <article class="card reveal"><div class="visual purple"></div><div class="cardInfo"><span>Orbit Zip Jacket</span><span class="price">R 1 199</span></div></article>
+    <article class="card reveal"><div class="visual"></div><div class="cardInfo"><span>Unspaced Cargo</span><span class="price">R 999</span></div></article>
+  </div>
+</section>
+
+<section class="section drop" id="drops">
+  <div class="sectionHead reveal"><div><div class="eyebrow">02 / New Drops</div><h2>Drop 001</h2></div><p class="sectionIntro">A sharp monochrome base interrupted by UNSPACED blue and purple. Built to transition from street to sport.</p></div>
+  <div class="products">
+    <article class="card reveal"><div class="visual blue"></div><div class="cardInfo"><span>Signal Tee</span><span class="price">R 549</span></div></article>
+    <article class="card reveal"><div class="visual purple"></div><div class="cardInfo"><span>Afterspace Hoodie</span><span class="price">R 949</span></div></article>
+    <article class="card reveal"><div class="visual"></div><div class="cardInfo"><span>Axis Pant</span><span class="price">R 1 049</span></div></article>
+    <article class="card reveal"><div class="visual blue"></div><div class="cardInfo"><span>Star Cap</span><span class="price">R 349</span></div></article>
+  </div>
+</section>
+
+<section class="split" id="about">
+  <div class="splitVisual"></div>
+  <div class="story reveal"><div class="eyebrow">03 / About</div><h2>Made for the in-between.</h2><p>UNSPACED lives between streetwear, sport, Y2K nostalgia and minimal design. The star is a signal: keep moving, stay curious, make your own position.</p><p>This starter story is intentionally editable so your real founder story and brand values can replace it without changing the visual system.</p><a class="cta" href="#contact">Talk to UNSPACED ↗</a></div>
+</section>
+
+<section class="section" id="lookbook">
+  <div id="uploadedGallery" class="products" style="margin-top:25px"></div>
+  <div class="sectionHead reveal"><div><div class="eyebrow">04 / Lookbook</div><h2>Out of position</h2></div><p class="sectionIntro">Editorial spaces, athletic movement and graphic tension. Replace these art-directed panels with your campaign photography when ready.</p></div>
+  <div class="lookbook">
+    <div class="look reveal"></div><div class="look reveal"></div><div class="look reveal"></div><div class="look reveal"></div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="contactGrid">
+    <div class="reveal"><div class="eyebrow">05 / Contact</div><h2>Stay in the loop.</h2><p>Use this space for customer support, wholesale enquiries, collaborations and social links.</p></div>
+    <form class="form reveal" onsubmit="event.preventDefault(); alert('Thanks — your message has been queued for UNSPACED.');">
+      <input aria-label="Name" placeholder="Name" required>
+      <input type="email" aria-label="Email" placeholder="Email" required>
+      <textarea aria-label="Message" placeholder="Message"></textarea>
+      <button class="cta" type="submit">Send message ↗</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="footer"><span>© 2026 UNSPACED</span><span>Instagram · TikTok · Email</span></footer>
+
+
+<div class="ownerPanel" id="ownerPanel" aria-hidden="true">
+  <div class="ownerBox">
+    <div class="ownerHead">
+      <h3>UNSPACED / Owner Editor</h3>
+      <button class="ownerClose" onclick="closeOwner()">×</button>
+    </div>
+    <div id="ownerLogin">
+      <div class="ownerField">
+        <label>Owner PIN</label>
+        <input id="ownerPin" type="password" inputmode="numeric" placeholder="Enter your PIN">
+      </div>
+      <div class="ownerActions">
+        <button class="cta" onclick="ownerLogin()">Unlock editor ↗</button>
+      </div>
+      <p class="ownerNote">On first use, the PIN you enter becomes the owner PIN for this browser. This starter editor stores changes locally on the device; a real multi-device owner CMS needs server authentication and a database.</p>
+      <div class="ownerStatus" id="ownerLoginStatus"></div>
+    </div>
+
+    <div id="ownerEditor" style="display:none">
+      <div class="ownerGrid">
+        <div class="ownerField full">
+          <label>Hero headline</label>
+          <input id="editHeadline">
+        </div>
+        <div class="ownerField full">
+          <label>Hero manifesto</label>
+          <input id="editManifesto">
+        </div>
+        <div class="ownerField full">
+          <label>Hero description</label>
+          <textarea id="editDescription"></textarea>
+        </div>
+        <div class="ownerField">
+          <label>Blue accent</label>
+          <input id="editBlue" type="color">
+        </div>
+        <div class="ownerField">
+          <label>Site background</label>
+          <input id="editBackground" type="color">
+        </div>
+        <div class="ownerField">
+          <label>Purple accent</label>
+          <input id="editPurple" type="color">
+        </div>
+      </div>
+
+      <hr style="border:0;border-top:1px solid #ddd;margin:28px 0">
+      <h4 style="margin:0 0 12px;text-transform:uppercase;letter-spacing:.1em">Site images</h4>
+      <div class="ownerField full">
+        <label>Add image</label>
+        <input id="imageUpload" type="file" accept="image/*" multiple onchange="handleImageUpload(event)">
+      </div>
+      <p class="ownerNote">Add photos to the site from your device. They appear in the Lookbook. You can delete individual images below. Images are stored in this browser, so they won't automatically appear on other devices until the site is connected to a server/CMS.</p>
+      <div id="ownerImageList" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px;margin-top:15px"></div>
+      <div class="ownerStatus" id="imageStatus"></div>
+
+      <hr style="border:0;border-top:1px solid #ddd;margin:28px 0">
+      <h4 style="margin:0 0 12px;text-transform:uppercase;letter-spacing:.1em">Cart appearance</h4>
+      <div class="ownerField full cartImageControls">
+        <label>Cart image</label>
+        <input id="cartImageUpload" type="file" accept="image/*" onchange="handleCartImageUpload(event)">
+        <img id="cartImagePreview" class="cartImagePreview hidden" alt="Cart image preview">
+      </div>
+      <p class="ownerNote">Upload an image to place at the top of your cart drawer. It stays on this browser and can be replaced or removed anytime.</p>
+      <div class="ownerActions">
+        <button class="cta" type="button" onclick="removeCartImage()" style="background:#ddd">Remove cart image</button>
+      </div>
+      <div class="ownerStatus" id="cartImageStatus"></div>
+
+      <div class="ownerCode" id="ownerCode">
+        <h4 style="margin:0 0 8px;text-transform:uppercase;letter-spacing:.1em">Code editor</h4>
+        <p class="codeHint">Edit the full HTML of this site directly. Your edits are saved in this browser. Use “Download HTML” to create a new standalone version of the site with your code changes.</p>
+        <textarea id="codeEditor" class="codeEditor" spellcheck="false"></textarea>
+        <div class="codeToolbar">
+          <button class="cta" onclick="saveCodeDraft()">Save code</button>
+          <button class="cta" style="background:#ddd" onclick="downloadCode()">Download HTML</button>
+          <button class="cta" style="background:#ddd" onclick="resetCode()">Reset code</button>
+          <button class="cta" style="background:#ddd" onclick="closeCodeEditor()">Close code editor</button>
+        </div>
+        <div class="codeSaved" id="codeStatus"></div>
+      </div>
+      <div class="ownerActions">
+        <button class="cta" onclick="openCodeEditor()">Edit site code</button>
+        <button class="cta" onclick="saveOwnerChanges()">Save changes ↗</button>
+        <button class="cta" style="background:#ddd" onclick="resetOwnerChanges()">Reset</button>
+        <button class="cta" style="background:#ddd" onclick="ownerLogout()">Lock editor</button>
+      </div>
+      <div class="ownerStatus" id="ownerStatus"></div>
+      <p class="ownerNote">These edits persist in this browser using local storage. Product management, image uploads, orders, and edits visible to customers on every device require a connected backend/CMS.</p>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawerHead"><strong>YOUR CART</strong><button class="close" onclick="toggleCart()">×</button></div>
+  <img id="cartBrandImage" class="cartBrandImage cartImageEmpty" alt="UNSPACED cart artwork">
+  <div id="cartItems" class="cartEmpty">Your cart is empty.</div>
+  <button class="cta" style="width:100%;justify-content:center" onclick="alert('Checkout is ready to connect to your payment provider.')">Checkout ↗</button>
+</aside>
+
+<script src="script.js"></script>
+
+</body>
+</html>
